@@ -14,9 +14,9 @@ def first_challenge
   }
 
   #your code here
-   contacts["Freddie Mercury"][favorite_icecream_flavors:][.delete_if {"strawberry"}]
+   contacts["Freddie Mercury"][favorite_icecream_flavors:].pop {"strawberry"}
   #remember to return your newly altered contacts hash!
-contacts.each do |person, data|
+ contacts.each do |person, data|
   data.each do |attribute, value|
     puts "#{attribute}: #{value}"
   end
